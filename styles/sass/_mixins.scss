@@ -1,0 +1,27 @@
+// COLORS 
+
+
+
+
+
+// FONTS 
+
+
+
+$fontStackPac: 'Pacifico', cursive;
+$fontStackSans: 'Open Sans', sans-serif;
+
+
+
+
+
+
+
+
+
+
+
+@mixin fontSize($fontValue){
+  font-size: $fontValue * 1px;
+  font-size: ($fontValue/10) * 1rem;
+}

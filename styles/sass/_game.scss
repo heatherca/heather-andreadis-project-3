@@ -1,0 +1,82 @@
+.game{
+  background: peachpuff;
+  // height: 100vh;
+
+  .holder{
+    padding: 5% 0;
+    padding-bottom: 0%;
+    display: grid;
+  }
+  .pan, .lasagna{
+  grid-area: 1/1;
+}
+
+  .pan {
+  width: 47%;
+  padding-bottom: 47%;
+  position: relative;
+  background-color: slategrey;
+  border: 10px solid rgb(97, 106, 116);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+  .lasagna {
+  width: 45.2%;
+  // padding-bottom: 45%;
+  position: relative;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+
+.gameInfo{
+  padding: 30px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.timer{
+  padding: 0 20px;
+}
+
+button{
+  font-family: $fontStackPac;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    background-color: royalblue;
+    width: 200px;
+    border: 5px solid royalblue;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 4px 4px palevioletred;
+    @include fontSize(20);
+}
+
+p{
+   @include fontSize(20);
+   font-family: $fontStackPac;
+   color: royalblue;
+   display: inline-block;
+   width: 200px;
+   padding: 10px;
+   margin-right: 10px;
+   background-color: white;
+   border: 5px solid royalblue;
+   border-radius: 10px;
+   
+}
+
+.pie img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity: 1;
+}
+
+
+}
