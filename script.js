@@ -28,7 +28,16 @@ function startTimer() {
         swal('You ate ' + percDone + '% of Nonna\'s lasagna. Nonna is concerned. You have never eaten so little lasagna! Clearly you are sick or sad. Luckily her lasagna is the cure for both these things and she tells you to have some more.');
       }
       else if (percDone < 25) {
-        swal('You ate ' + percDone + '% of Nonna\'s lasagna. Nonna is distraught. You clearly don\'t love her or her lasagna. Tears well up in her eyes. She sits down, despondent. Quickly eat more lasagna and restore Nonna\'s happiness.');
+        swal({
+          text: 'You ate ' + percDone + '% of Nonna\'s lasagna. Nonna is distraught. You clearly don\'t love her or her lasagna. Tears well up in her eyes. She sits down, despondent. Quickly eat more lasagna and restore Nonna\'s happiness.',
+          button: 'Eat Again',
+          closeOnClickOutside: false
+        }).then(function () {
+          // intially used location.reload but wanted it to refresh to start of page
+          location.href = 'index.html';
+        }
+        );
+
       }
       
       clearInterval(counter);
