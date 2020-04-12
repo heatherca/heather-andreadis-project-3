@@ -78,6 +78,16 @@ function eating() {
       $(this).css("opacity", "-=0.1");
     }
   });
+  $('img').touchstart(function () {
+
+    if ($(this).css('opacity') == '0.1') {
+      $(this).css("opacity", "0");
+      $(this).addClass("done");
+    }
+    else if ($(this).css('opacity') > '0.1') {
+      $(this).css("opacity", "-=0.1");
+    }
+  });
 }
 
 
