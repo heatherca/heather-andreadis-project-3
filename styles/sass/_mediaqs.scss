@@ -57,10 +57,10 @@
 @media (max-width: 440px){
   .game{
     .pan{
-      max-width: 288px;
+      min-width: 188px;
     }
     .lasagna{
-      max-width: 268px;
+      min-width: 168px;
     }
   }
 }
