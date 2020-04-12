@@ -534,12 +534,3 @@ h1, h2, h3, h4, p {
     margin: 10px;
   }
 }
-
-@media (max-width: 440px) {
-  .game .pan {
-    min-width: 288px;
-  }
-  .game .lasagna {
-    min-width: 268px;
-  }
-}
