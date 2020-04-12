@@ -12,9 +12,6 @@
 
 @media (max-width: 570px){
   .game{
-      display:flex;
-      align-items: center;
-
     .pan{
       min-width: 400px;
     }
@@ -57,10 +54,10 @@
 @media (max-width: 440px){
   .game{
     .pan{
-      min-width: 188px;
+      min-width: 288px;
     }
     .lasagna{
-      min-width: 168px;
+      min-width: 268px;
     }
   }
 }
