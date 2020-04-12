@@ -452,6 +452,8 @@ h1, h2, h3, h4, p {
   height: 100%;
   display: block;
   opacity: 1;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 .swal-modal {
