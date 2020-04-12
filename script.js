@@ -78,6 +78,13 @@ function eating() {
       $(this).css("opacity", "-=0.1");
     }
   });
+  $("img")
+    .on("touchmove", function (e) {
+      var xPos = e.originalEvent.touches[0].pageX;
+      var yPos = e.originalEvent.touches[0].pageY;
+
+      $(document.elementFromPoint(xPos, yPos)).css("opacity", "-=0.1");
+    }).end()
 
 }
 
