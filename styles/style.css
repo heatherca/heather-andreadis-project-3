@@ -306,7 +306,6 @@ h1, h2, h3, h4, p {
   color: black;
   font-size: 20px;
   font-size: 2rem;
-  text-align: justify;
 }
 
 .intro .double {
@@ -480,6 +479,69 @@ h1, h2, h3, h4, p {
   font-size: 2rem;
 }
 
+.swal-text {
+  text-align: center;
+}
+
 .swal-footer {
   text-align: center;
+}
+
+@media (max-width: 850px) {
+  .intro h1 {
+    margin-bottom: 3%;
+  }
+  .intro .half {
+    height: auto;
+  }
+}
+
+@media (max-width: 570px) {
+  .game {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .game .pan {
+    min-width: 400px;
+  }
+  .game .lasagna {
+    min-width: 380px;
+  }
+}
+
+@media (max-width: 520px) {
+  .intro h1 {
+    font-size: 45px;
+    font-size: 4.5rem;
+  }
+  .intro h2 {
+    font-size: 25px;
+    font-size: 2.5rem;
+  }
+  .intro .half:last-of-type {
+    padding: 20px;
+  }
+  .intro p {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+  .intro .half {
+    min-width: 100%;
+  }
+  .game p {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 440px) {
+  .game .pan {
+    min-width: 288px;
+  }
+  .game .lasagna {
+    min-width: 268px;
+  }
 }

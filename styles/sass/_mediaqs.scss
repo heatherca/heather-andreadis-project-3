@@ -1,0 +1,66 @@
+@media (max-width: 850px){
+  .intro{
+    h1{
+      margin-bottom: 3%;
+    }
+
+    .half{
+      height: auto;
+    }
+  }
+}
+
+@media (max-width: 570px){
+  .game{
+      display:flex;
+      align-items: center;
+
+    .pan{
+      min-width: 400px;
+    }
+    .lasagna{
+      min-width: 380px;
+    }
+  }
+}
+
+@media (max-width: 520px){
+  .intro{
+    h1{
+      @include fontSize(45)
+    }
+
+    h2{
+      @include fontSize(25)
+    }
+
+    .half:last-of-type{
+      padding: 20px;
+    }
+
+    p{
+      @include fontSize(16)
+    }
+
+    .half{
+      min-width: 100%;
+    }
+  }
+
+  .game{
+    p{
+      margin: 10px;
+    }
+  }
+}
+
+@media (max-width: 440px){
+  .game{
+    .pan{
+      min-width: 288px;
+    }
+    .lasagna{
+      min-width: 268px;
+    }
+  }
+}
