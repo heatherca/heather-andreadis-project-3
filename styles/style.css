@@ -365,8 +365,6 @@ h1, h2, h3, h4, p {
 .game {
   background: peachpuff;
   min-height: 100vh;
-  -ms-touch-action: none;
-      touch-action: none;
 }
 
 .game .holder {
@@ -539,9 +537,9 @@ h1, h2, h3, h4, p {
 
 @media (max-width: 440px) {
   .game .pan {
-    min-width: 288px;
+    max-width: 288px;
   }
   .game .lasagna {
-    min-width: 268px;
+    max-width: 268px;
   }
 }
