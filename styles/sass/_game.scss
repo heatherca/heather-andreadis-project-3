@@ -1,6 +1,7 @@
 .game{
   background: peachpuff;
   min-height: 100vh;
+  touch-action: none;
 
   .holder{
     padding: 5% 0;
