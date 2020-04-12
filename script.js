@@ -1,7 +1,6 @@
 
 
 
-
 // Countdown timer that starts game 
 // https://stackoverflow.com/questions/21670438/make-countdown-start-after-button-is-clicked/21670514 
 function startTimer() {
@@ -9,23 +8,45 @@ function startTimer() {
   setInterval(function () {
     counter--;
     if (counter >= 0) {
-      span = document.getElementById("timer");
-      span.innerHTML = counter;
+      // span = document.getElementById("timer");
+      $('#timer').html(counter);
     }
     if (counter === 0) {
       // count number of done classes
       let numDone = $(".done").length
-      // divide number of done classes by 64(total number of squares
+      // divide number of done classes by 64(total number of squares)
       let percDone = ((numDone / 64) * 100).toFixed(0)
       // change message depending on amount of lasagna eaten 
       if (percDone >=75){
-        swal('You ate ' + percDone + '% of Nonna\'s lasagna. Nonna is so happy and glows in your obvious love for her and her lasagna! She promptly goes to the oven and pulls out another lasagna just for you.');
+        swal({
+          text:'You ate ' + percDone + '% of Nonna\'s lasagna. Nonna is so happy and glows in your obvious love for her and her lasagna! She promptly goes to the oven and pulls out another lasagna just for you.',
+          button: 'Eat Again',
+          closeOnClickOutside: false
+        }).then(function () {
+          // intially used location.reload but wanted it to refresh to start of page
+          location.href = 'index.html';
+        }
+        );
       }
       else if(percDone < 75 && percDone >= 50){
-        swal('You ate ' + percDone + '% of Nonna\'s lasagna. Nonna looks at you quizically, she thought lasangna was your favourite? Did she not put enough cheese? Prove to Nonna her lasagna is perfect.');
+        swal({
+          text:'You ate ' + percDone + '% of Nonna\'s lasagna. Nonna looks at you quizically, she thought lasangna was your favourite? Did she not put enough cheese? Prove to Nonna her lasagna is perfect.',
+          button: 'Eat Again',
+          closeOnClickOutside: false
+        }).then(function () {
+          location.href = 'index.html';
+        }
+        );
       }
       else if (percDone < 50 && percDone >= 25) {
-        swal('You ate ' + percDone + '% of Nonna\'s lasagna. Nonna is concerned. You have never eaten so little lasagna! Clearly you are sick or sad. Luckily her lasagna is the cure for both these things and she tells you to have some more.');
+        swal({
+          text: 'You ate ' + percDone + '% of Nonna\'s lasagna. Nonna is concerned. You have never eaten so little lasagna! Clearly you are sick or sad. Luckily her lasagna is the cure for both these things and she tells you to have some more.',
+          button: 'Eat Again',
+          closeOnClickOutside: false
+        }).then(function () {
+          location.href = 'index.html';
+        }
+        );
       }
       else if (percDone < 25) {
         swal({
@@ -33,7 +54,6 @@ function startTimer() {
           button: 'Eat Again',
           closeOnClickOutside: false
         }).then(function () {
-          // intially used location.reload but wanted it to refresh to start of page
           location.href = 'index.html';
         }
         );

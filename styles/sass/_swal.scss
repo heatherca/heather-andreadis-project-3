@@ -1,0 +1,26 @@
+// SWEET ALERT STYLING 
+
+
+.swal-modal{
+  border: 5px solid royalblue;
+  font-family: $fontStackSans;
+  border-radius: 5%;
+}
+
+.swal-button {
+ font-family: $fontStackPac;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  background-color: royalblue;
+  width: 200px;
+  border: 5px solid royalblue;
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 4px 4px palevioletred;
+  @include fontSize(20);
+}
+
+.swal-footer {
+  text-align: center;
+}

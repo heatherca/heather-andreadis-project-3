@@ -1,6 +1,6 @@
 .game{
   background: peachpuff;
-  // height: 100vh;
+  min-height: 100vh;
 
   .holder{
     padding: 5% 0;
@@ -12,6 +12,7 @@
 }
 
   .pan {
+  min-width: 500px;
   width: 47%;
   padding-bottom: 47%;
   position: relative;
@@ -22,8 +23,8 @@
 }
 
   .lasagna {
+  min-width: 480px;
   width: 45.2%;
-  // padding-bottom: 45%;
   position: relative;
   margin: 0 auto;
   margin-top: 10px;
