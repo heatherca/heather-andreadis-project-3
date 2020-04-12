@@ -68,7 +68,7 @@ function startTimer() {
 
 // reduce opacity of lasagna image and add class of done when opacity reaches 0 
 function eating() {
-  $('img').on('mouseenter touchstart', function () {
+  $('img').on('mouseenter touchend', function () {
     
     if ($(this).css('opacity') == '0.1'){
       $(this).css("opacity", "0");
