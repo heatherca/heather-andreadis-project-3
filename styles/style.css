@@ -504,10 +504,10 @@ h1, h2, h3, h4, p {
 
 @media (max-width: 570px) {
   .game .pan {
-    min-width: 400px;
+    min-width: 90vw;
   }
   .game .lasagna {
-    min-width: 380px;
+    min-width: 86vw;
   }
 }
 
