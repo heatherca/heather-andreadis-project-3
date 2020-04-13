@@ -62,7 +62,7 @@ function startTimer() {
 
 // reduce opacity of lasagna image and add class of done when opacity reaches 0 
 function eating() {
-  $('img').on('click', function () {
+  $('img').on('click touchstart', function () {
     
     // safari fix wasn't reducing opacity to solid number
     if ($(this).css('opacity') <= '0.21' && $(this).css('opacity') >= '0.2'){
@@ -73,18 +73,6 @@ function eating() {
       $(this).css("opacity", "-=0.2");
     }
   });
-  $('img').on('touchstart', function () {
-
-    // safari fix wasn't reducing opacity to solid number
-    if ($(this).css('opacity') <= '0.11' && $(this).css('opacity') >= '0.09') {
-      $(this).css("opacity", "0");
-      $(this).addClass("done");
-    }
-    else if ($(this).css('opacity') > '0.1') {
-      $(this).css("opacity", "-=0.1");
-    }
-  });
-
 }
 
 // display the game when let's eat button clicked (change height of game section)
