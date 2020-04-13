@@ -6,7 +6,6 @@ function startTimer() {
   setInterval(function () {
     counter--;
     if (counter >= 0) {
-      // span = document.getElementById("timer");
       $('#timer').html(counter);
     }
     if (counter === 0) {
@@ -63,7 +62,8 @@ function startTimer() {
 
 // reduce opacity of lasagna image and add class of done when opacity reaches 0 
 function eating() {
-  $('img').on('click touchstart', function () {
+  $('img').on('click', function () {
+    
     // safari fix wasn't reducing opacity to solid number
     if ($(this).css('opacity') <= '0.21' && $(this).css('opacity') >= '0.2'){
       $(this).css("opacity", "0");
@@ -73,12 +73,26 @@ function eating() {
       $(this).css("opacity", "-=0.2");
     }
   });
+  $('img').on('touchstart', function () {
+
+    // safari fix wasn't reducing opacity to solid number
+    if ($(this).css('opacity') <= '0.11' && $(this).css('opacity') >= '0.09') {
+      $(this).css("opacity", "0");
+      $(this).addClass("done");
+    }
+    else if ($(this).css('opacity') > '0.1') {
+      $(this).css("opacity", "-=0.1");
+    }
+  });
+
 }
 
 // display the game when let's eat button clicked (change height of game section)
 $("#goto").on('click', function(){
-  $("#game").css("height", "100vh");
-  $("#game").css("overflow", "visible")
+  $("#game").css("min-height", "100vh");
+  $("#game").css("overflow", "visible");
+  $("#game").css("height", "auto");
+
 });
 
 // Start timer on button click, run eating function to make sure that eating can't start until time starts, make sure timer doesn't run when button clicked again 
