@@ -8,7 +8,7 @@ function startTimer() {
     if (counter >= 0) {
       $('#timer').html(counter);
     }
-    if (counter === 0) {
+    if (counter === 0 || percDone == 100) {
       // count number of done classes
       let numDone = $(".done").length
       // divide number of done classes by 64(total number of squares)
