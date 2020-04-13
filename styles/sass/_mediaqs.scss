@@ -13,10 +13,10 @@
 @media (max-width: 570px){
   .game{
     .pan{
-      min-width: 90vw;
+      min-width: 80vw;
     }
     .lasagna{
-      min-width: 86vw;
+      min-width: 76vw;
     }
   }
 }
@@ -36,7 +36,8 @@
     }
 
     p{
-      @include fontSize(16)
+      @include fontSize(16);
+      line-height: 2.2rem;
     }
 
     .half{

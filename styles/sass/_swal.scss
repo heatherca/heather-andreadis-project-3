@@ -2,7 +2,7 @@
 
 
 .swal-modal{
-  border: 5px solid royalblue;
+  border: 5px solid $primaryAccent;
   font-family: $fontStackSans;
   border-radius: 5%;
 }
@@ -11,14 +11,37 @@
  font-family: $fontStackPac;
   padding: 10px;
   text-align: center;
-  color: white;
-  background-color: royalblue;
+  color: $white;
+  background-color: $primaryAccent;
   width: 200px;
-  border: 5px solid royalblue;
+  border: 5px solid $primaryAccent;
   border-radius: 10px;
   margin: 0 auto;
-  box-shadow: 4px 4px palevioletred;
+  box-shadow: 4px 4px $primaryColor;
   @include fontSize(20);
+  transition: all 0.5s ease;
+}
+.swal-button:focus{
+  box-shadow: 4px 4px $backgroundB;
+  color: $white;
+  background-color: $primaryAccent;
+
+}
+
+.swal-button:hover{
+  color: $white;
+  box-shadow: 4px 4px $backgroundB;
+}
+.swal-button:not([disabled]):hover{
+  background-color: $primaryColor;
+  border: 5px solid $primaryColor;
+}
+
+.swal-button:active{
+  color: $white;
+  background-color: $primaryColor;
+  transform: translateY(2px);
+  box-shadow: 4px 2px $backgroundB;
 }
 
 .swal-text{

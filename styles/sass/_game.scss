@@ -1,6 +1,9 @@
+// SECOND HALF OF PAGE WHERE GAME IS 
+
 .game{
-  background: peachpuff;
-  height: 100vh;
+  background: $backgroundB;
+  height: 0px;
+  overflow: hidden;
   display:flex;
   align-items: center;
   
@@ -15,18 +18,19 @@
 }
 
   .pan {
-  min-width: 70vh;
+  min-width: 60vh;
   width: 47%;
   padding-bottom: 47%;
   position: relative;
-  background-color: slategrey;
-  border: 10px solid rgb(97, 106, 116);
+  background-color: $secondaryAccent;
+  border: 10px solid darken($secondaryAccent, 10%);
+  box-shadow: 0px 0px 11px 7px darken($backgroundB, 3%);
   border-radius: 10px;
   margin: 0 auto;
 }
 
   .lasagna {
-  min-width: 68vh;
+  min-width: 58vh;
   width: 45.2%;
   position: relative;
   margin: 0 auto;
@@ -43,7 +47,7 @@
   margin: 0 auto;
 }
 
-.timer{
+.time{
   padding: 0 20px;
 }
 
@@ -51,26 +55,40 @@ button{
   font-family: $fontStackPac;
     padding: 10px;
     text-align: center;
-    color: white;
-    background-color: royalblue;
+    color: $white;
+    background-color: $primaryAccent;
     width: 200px;
-    border: 5px solid royalblue;
+    border: 5px solid $primaryAccent;
     border-radius: 10px;
     margin: 0 auto;
-    box-shadow: 4px 4px palevioletred;
+    box-shadow: 4px 4px $primaryColor;
     @include fontSize(20);
+    transition: all 0.5s ease;
+}
+
+button:hover, button:focus{
+  color: $white;
+  background-color: $primaryColor;
+  border: 5px solid $primaryColor;
+  box-shadow: 4px 4px $primaryAccent;
+  cursor: pointer;
+}
+
+button:active{
+  transform: translateY(2px);
+  box-shadow: 4px 2px primaryAccent;
 }
 
 p{
    @include fontSize(20);
    font-family: $fontStackPac;
-   color: royalblue;
+   color: $primaryAccent;
    display: inline-block;
    width: 200px;
    padding: 10px;
    margin-right: 10px;
-   background-color: white;
-   border: 5px solid royalblue;
+   background-color: $white;
+   border: 5px solid $primaryColor;
    border-radius: 10px;
    
 }
