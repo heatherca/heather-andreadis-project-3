@@ -62,7 +62,7 @@ function startTimer() {
 
 // reduce opacity of lasagna image and add class of done when opacity reaches 0 
 function eating() {
-  $('img').on('click touchstart', function () {
+  $('img').on('click touchend', function () {
     
     // safari fix wasn't reducing opacity to solid number
     if ($(this).css('opacity') <= '0.21' && $(this).css('opacity') >= '0.2'){
