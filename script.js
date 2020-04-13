@@ -1,6 +1,4 @@
 
-
-
 // Countdown timer that starts game 
 // https://stackoverflow.com/questions/21670438/make-countdown-start-after-button-is-clicked/21670514 
 function startTimer() {
@@ -57,20 +55,17 @@ function startTimer() {
           location.href = 'index.html';
         }
         );
-
       }
-      
       clearInterval(counter);
     }
   }, 1000);
 }
 
-
 // reduce opacity of lasagna image and add class of done when opacity reaches 0 
 function eating() {
-  $('img').on('click touchend', function () {
-    
-    if ($(this).css('opacity') <= '0.2' && $(this).css('opacity') >'0.19'){
+  $('img').on('click touchstart', function () {
+    // safari fix wasn't reducing opacity to solid number
+    if ($(this).css('opacity') <= '0.21' && $(this).css('opacity') >= '0.2'){
       $(this).css("opacity", "0");
       $(this).addClass("done");
     }
@@ -78,17 +73,16 @@ function eating() {
       $(this).css("opacity", "-=0.2");
     }
   });
-
 }
 
 // display the game when let's eat button clicked (change height of game section)
 $("#goto").on('click', function(){
-  $("#game").css("height", "100vh")
+  $("#game").css("height", "100vh");
+  $("#game").css("overflow", "visible")
 });
 
 // Start timer on button click, run eating function to make sure that eating can't start until time starts, make sure timer doesn't run when button clicked again 
 $("#startTime").one('click', function () {
   startTimer();
   eating();
-  
 });

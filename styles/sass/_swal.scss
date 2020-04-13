@@ -1,10 +1,17 @@
 // SWEET ALERT STYLING 
 
-
 .swal-modal{
   border: 5px solid $primaryAccent;
   font-family: $fontStackSans;
   border-radius: 5%;
+}
+
+.swal-text{
+  text-align: center;
+}
+
+.swal-footer {
+  text-align: center;
 }
 
 .swal-button {
@@ -21,11 +28,11 @@
   @include fontSize(20);
   transition: all 0.5s ease;
 }
+
 .swal-button:focus{
   box-shadow: 4px 4px $backgroundB;
   color: $white;
   background-color: $primaryAccent;
-
 }
 
 .swal-button:hover{
@@ -42,12 +49,4 @@
   background-color: $primaryColor;
   transform: translateY(2px);
   box-shadow: 4px 2px $backgroundB;
-}
-
-.swal-text{
-  text-align: center;
-}
-
-.swal-footer {
-  text-align: center;
 }

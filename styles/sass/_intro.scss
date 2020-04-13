@@ -3,8 +3,8 @@
   background: $backgroundA;
   color: $primaryColor;
   @include fontSize(20);
-  padding-top: 3%;
-  padding-bottom: 3%;
+  padding-top: 2%;
+  padding-bottom: 2%;
   min-height: 100vh;
 
   h1{
@@ -39,7 +39,7 @@
 
   .half{
     min-width: 400px;
-    width: 40vw;
+    width: 38vw;
     height: auto;
     min-height: 55vh;
     margin-top: 4%;
@@ -52,7 +52,7 @@
 
   .half:first-of-type{
     overflow: hidden;
-    width: 35vw;
+    width: 34vw;
   }
 
   .half:last-of-type{
