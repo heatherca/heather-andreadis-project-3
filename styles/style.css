@@ -539,6 +539,8 @@ h1, h2, h3, h4, p {
 
 .swal-button:hover {
   color: white;
+  background-color: paleVioletRed;
+  border: 5px solid paleVioletRed;
   -webkit-box-shadow: 4px 4px peachPuff;
           box-shadow: 4px 4px peachPuff;
 }

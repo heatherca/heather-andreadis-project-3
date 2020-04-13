@@ -37,6 +37,8 @@
 
 .swal-button:hover{
   color: $white;
+  background-color: $primaryColor;
+  border: 5px solid $primaryColor;
   box-shadow: 4px 4px $backgroundB;
 }
 .swal-button:not([disabled]):hover{
